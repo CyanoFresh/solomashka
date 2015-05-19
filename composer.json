@@ -1,0 +1,43 @@
+{
+    "name": "cyanofresh/yii2shop",
+    "description": "Online Shop on Yii2",
+    "keywords": ["yii2", "framework", "advanced", "application template", "shop", "online", "e-commerce"],
+    "homepage": "http://yii2shop.solomaha.me/",
+    "type": "project",
+    "license": "BSD-3-Clause",
+    "support": {
+        "issues": "https://github.com/CyanoFresh/yii2shop/issues",
+        "wiki": "https://github.com/CyanoFresh/yii2shop/wiki/",
+        "source": "https://github.com/CyanoFresh/yii2shop"
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": "*",
+        "yiisoft/yii2-bootstrap": "*",
+        "yiisoft/yii2-swiftmailer": "*",
+        "omnilight/yii2-shopping-cart": "*",
+        "kartik-v/yii2-widgets": "*",
+        "zelenin/yii2-slug-behavior": "~0.2@stable",
+        "vova07/yii2-imperavi-widget": "*",
+        "2amigos/yii2-gallery-widget": "*",
+        "himiklab/yii2-sortable-grid-view-widget": "*",
+        "ijackua/yii2-sharelinks-widget": "*",
+        "kartik-v/yii2-icons": "dev-master"
+    },
+    "require-dev": {
+        "yiisoft/yii2-codeception": "*",
+        "yiisoft/yii2-debug": "*",
+        "yiisoft/yii2-gii": "*",
+        "yiisoft/yii2-faker": "*"
+    },
+    "config": {
+        "process-timeout": 1800
+    },
+    "extra": {
+        "asset-installer-paths": {
+            "npm-asset-library": "vendor/npm",
+            "bower-asset-library": "vendor/bower"
+        }
+    }
+}

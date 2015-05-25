@@ -25,7 +25,7 @@ return [
     'Catalog' => 'Каталог',
     'Categories' => 'Категории',
     'Category' => 'Категория',
-    'Date Created' => 'Дата добавления',
+    'Date Created' => 'Дата',
     'Order by:' => 'Сортировать по:',
     'Share' => 'Поделиться',
     'View' => 'Подробенее',

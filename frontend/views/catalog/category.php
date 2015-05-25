@@ -24,6 +24,8 @@ $this->params['breadcrumbs'][] = $model->name;
 $this->registerMetaTag(['name' => 'description', 'content' => $model->meta_description]);
 $this->registerMetaTag(['name' => 'keywords', 'content' => $model->meta_keywords]);
 ?>
+<h1 class="page-header"><?= $this->title ?></h1>
+
 <div class="row">
     <div class="col-lg-3 col-md-3 col-sm-12">
         <div class="panel panel-default">
@@ -37,12 +39,11 @@ $this->registerMetaTag(['name' => 'keywords', 'content' => $model->meta_keywords
         </div>
     </div>
     <div class="col-lg-9 col-md-9 col-sm-12">
-        <h1><?= Html::encode($this->title) ?></h1>
-
         <blockquote>
             <?= $model->description ?>
         </blockquote>
 
+        <?php if ($model->categories): ?>
         <div class="child-categories">
             <?php foreach ($model->categories as $category): ?>
                 <?= Html::a($category->name, ['catalog/category', 'category' => $category->slug], [
@@ -51,6 +52,7 @@ $this->registerMetaTag(['name' => 'keywords', 'content' => $model->meta_keywords
             <?php endforeach ?>
             <div class="clearfix"></div>
         </div>
+        <?php endif ?>
 
         <div class="well">
             <?= Yii::t('frontend/catalog', 'Order by:') ?>

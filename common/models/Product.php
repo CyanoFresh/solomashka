@@ -53,7 +53,7 @@ class Product extends ActiveRecord implements CartPositionInterface
     {
         return [
             [['category_id', 'price', 'date', 'name', 'description'], 'required'],
-            [['category_id', 'status_id', 'price'], 'integer'],
+            [['category_id', 'status_id', 'show_home', 'price'], 'integer'],
             [['description'], 'string'],
             [['slug', 'name', 'meta_description', 'meta_keywords'], 'string', 'max' => 255],
             [['date'], 'safe'],
@@ -73,6 +73,7 @@ class Product extends ActiveRecord implements CartPositionInterface
             'id' => Yii::t('common/product', 'ID'),
             'category_id' => Yii::t('common/product', 'Category'),
             'status_id' => Yii::t('common/product', 'Status'),
+            'show_home' => Yii::t('backend/product', 'Show at Home'),
             'price' => Yii::t('common/product', 'Price'),
             'image' => Yii::t('common/product', 'Image'),
             'images' => Yii::t('common/product', 'Images'),

@@ -56,7 +56,7 @@ AppAsset::register($this);
         <div class="footer" id="footer">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-sm-6">
                         <h3><?= Yii::t('frontend', 'Support') ?></h3>
                         <ul>
                             <li class="supportLi">
@@ -72,7 +72,7 @@ AppAsset::register($this);
                             </li>
                         </ul>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-6">
                         <h3><?= Yii::t('frontend', 'Shop') ?></h3>
                         <ul>
                             <li><?= Html::a(Yii::t('frontend', 'Home'), ['site/index']) ?></li>

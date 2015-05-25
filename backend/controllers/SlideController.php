@@ -141,7 +141,11 @@ class SlideController extends Controller
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
+        $model = $this->findModel($id);
+
+        unlink(Yii::getAlias('@frontend/web/uploads/slide/') . $model->id . '.jpg');
+
+        $model->delete();
 
         return $this->redirect(['index']);
     }

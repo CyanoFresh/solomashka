@@ -19,7 +19,7 @@
 return [
     'Clear Cart' => 'Очистить Коризну',
     'Total cost' => 'Стоимость',
-    'Your order number: {orderNumber}' => '',
+    'Your order number: {orderNumber}' => 'Ваш номер заказа: {orderNumber}',
     'Your request was successfully ordered. We will contact you soon' => 'Ваш заказ был успешно оформлен. Мы скоро с Вами свяжемся',
     'Cart' => 'Корзина',
     'Category' => 'Категория',

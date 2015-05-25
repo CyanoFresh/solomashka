@@ -8,6 +8,8 @@ use yii\widgets\ListView;
 $this->title = Yii::t('frontend/catalog', 'Catalog');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<h1 class="page-header"><?= $this->title ?></h1>
+
 <div class="row">
     <div class="col-lg-3 col-md-3 col-sm-12">
         <div class="panel panel-default">
@@ -21,8 +23,6 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
     </div>
     <div class="col-lg-9 col-md-9 col-sm-12">
-        <h1><?= Html::encode($this->title) ?></h1>
-
         <div class="well">
             <?= Yii::t('frontend/catalog', 'Order by:') ?>
             <?= $dataProvider->sort->link('name', [
@@ -40,7 +40,7 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
 
         <?= ListView::widget([
-            'layout' => "{summary}\n<div class=\"row\">{items}</div>\n{pager}",
+            'layout' => "<div class=\"row\">{items}</div>\n{pager}",
             'dataProvider' => $dataProvider,
             'itemView' => '_product',
             'viewParams' => ['class' => 'col-sm-4 col-lg-4 col-md-4 col-xs-6'],

@@ -14,7 +14,6 @@ main {
 
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
-    padding-bottom: 15px;
 }
 
 /* Footer */
@@ -165,6 +164,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Product image gallery */
 .gallery-item img {
     border-radius: 6px;
+    cursor: zoom-in;
 }
 
 .gallery-item:first-child img {
@@ -174,7 +174,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .gallery-item:not(:first-child) img {
-    max-width: 25%;
+    max-width: 100px;
     margin-top: 20px;
     display: inline-block;
     height: auto;

@@ -39,7 +39,7 @@ foreach (Image::findAll(['model_id' => $model->id]) as $image) {
 }
 ?>
 
-<div class="row">
+<div class="row product-view">
     <div class="col-sm-6">
         <?= Gallery::widget([
             'items' => $galleryItems,

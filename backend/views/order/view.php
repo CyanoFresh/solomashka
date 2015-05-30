@@ -8,7 +8,9 @@ use yii\widgets\DetailView;
 /* @var $model common\models\Order */
 /* @var $dataProvider yii\data\ArrayDataProvider */
 
-$this->title = $model->name;
+$this->title = Yii::t('backend/order', 'Order #{orderID}', [
+    'orderID' => $model->id,
+]);
 $this->params['breadcrumbs'][] = ['label' => Yii::t('backend/order', 'Orders'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

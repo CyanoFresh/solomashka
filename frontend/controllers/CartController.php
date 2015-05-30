@@ -69,10 +69,9 @@ class CartController extends Controller
 
             if ($model->validate() && $model->save()) {
                 Yii::$app->mailer->compose('order/html', [
-                    'params' => [
                         'model' => $model,
                         'dataProvider' => $dataProvider,
-                    ]])
+                    ])
                     ->setFrom('alex@solomaha.me')
                     ->setTo('cyanofresh@gmail.com')
                     ->setSubject('На сайте размещен новый заказ')

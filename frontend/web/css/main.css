@@ -1,8 +1,8 @@
 html,
 body {
     height: 100%;
-    background: url("../img/bg.jpg") repeat;
-    font-weight: 600;
+    /* TODO: background image */
+    /*background: url("../img/bg.jpg") repeat;*/
 }
 
 .wrap {

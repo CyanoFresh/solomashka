@@ -178,6 +178,9 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 20px;
 }
 
+.product-view .panel-body {
+    padding: 30px;
+}
 /* add sorting icons to gridview sort links */
 a.asc:after, a.desc:after {
     position: relative;

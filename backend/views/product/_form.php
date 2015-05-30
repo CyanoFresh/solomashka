@@ -102,11 +102,6 @@ foreach ($image_models as $image) {
 
     <?= $form->field($model, 'status_id')->dropDownList($statuses) ?>
 
-    <?= $form->field($model, 'show_home')->dropDownList([
-        '0' => 'Нет',
-        '1' => 'Да',
-    ]) ?>
-
     <?= $form->field($model, 'slug')
         ->textInput(['maxlength' => 255])
         ->hint(Yii::t('backend/product', 'If empty it will be generated from name')) ?>

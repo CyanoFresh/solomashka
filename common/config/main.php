@@ -27,7 +27,7 @@ return [
         ],
         'view' => [
             'class' => '\rmrevin\yii\minify\View',
-            'enableMinify' => !YII_DEBUG,
+            'enableMinify' => false,
             'web_path' => '@web', // path alias to web base
             'base_path' => '@webroot', // path alias to web base
             'minify_path' => '@webroot/minify', // path alias to save minify result

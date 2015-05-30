@@ -1,0 +1,17 @@
+html,
+body {
+    height: 100%;
+    background: url("../img/bg.jpg") repeat;
+    font-weight: 600;
+}
+
+.wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -100px;
+    padding: 0 0 100px;
+}
+
+.wrap > .container {
+    padding: 70px 15px 20px;
+}

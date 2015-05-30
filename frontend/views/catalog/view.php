@@ -48,39 +48,45 @@ foreach (Image::findAll(['model_id' => $model->id]) as $image) {
     </div>
 
     <div class="col-sm-6">
-        <h1 class="product-header">
-            <?= $model->name ?>
-        </h1>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h1 class="product-header">
+                    <?= $model->name ?>
+                </h1>
 
-        <hr>
+                <hr>
 
-        <p class="product-description">
-            <?= $model->description ?>
-        </p>
+                <p class="product-description">
+                    <?= $model->description ?>
+                </p>
 
-        <hr>
+                <hr>
 
-        <div class="product-price">
-            <?= Yii::$app->formatter->asCurrency($model->price) ?>
-            <?php if ($model->status_id): ?>
-                <span class="status"
-                      style="color: <?= $model->status->color ?>;
-                          background: <?= $model->status->background ?>;
-                          font-size: inherit">
-                    <?= $model->status->name ?>
-                </span>
-            <?php endif ?>
+                <div class="product-price">
+                    <?= Yii::$app->formatter->asCurrency($model->price) ?>
+                    <?php if ($model->status_id): ?>
+                        <span class="status"
+                              style="color: <?= $model->status->color ?>;
+                                  background: <?= $model->status->background ?>;
+                                  font-size: inherit">
+                            <?= $model->status->name ?>
+                        </span>
+                    <?php endif ?>
+                </div>
+
+                <hr>
+
+                <div class="product-button">
+                    <?= Html::a(Yii::t('frontend/catalog', 'Add To Cart'), ['cart/add', 'id' => $model->id], [
+                        'class' => 'btn btn-primary btn-lg'
+                    ]) ?>
+                </div>
+            </div>
         </div>
 
-        <hr>
 
-        <div class="product-button">
-            <?= Html::a(Yii::t('frontend/catalog', 'Add To Cart'), ['cart/add', 'id' => $model->id], [
-                'class' => 'btn btn-primary btn-lg'
-            ]) ?>
-        </div>
-
-        <hr>
+        <div class="panel panel-default">
+            <div class="panel-body">
 
         <div class="row">
             <div class="col-sm-4">
@@ -96,6 +102,8 @@ foreach (Image::findAll(['model_id' => $model->id]) as $image) {
             <div class="col-sm-4">
                 <h4><?= Yii::t('frontend/catalog', 'Date Created') ?></h4>
                 <?= Yii::$app->formatter->asDatetime($model->date) ?>
+            </div>
+        </div>
             </div>
         </div>
     </div>

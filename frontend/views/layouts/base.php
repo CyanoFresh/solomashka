@@ -21,10 +21,10 @@ AppAsset::register($this);
 </head>
 <body>
     <?php $this->beginBody() ?>
-
-    <header>
+    <div class="wrap">
         <?php
             NavBar::begin([
+                'id' => 'menu',
                 'brandLabel' => Yii::$app->name,
                 'brandUrl' => Yii::$app->homeUrl,
                 'options' => [
@@ -41,16 +41,15 @@ AppAsset::register($this);
             ];
             echo Nav::widget([
                 'options' => ['class' => 'navbar-nav navbar-right'],
+                'id' => 'menu-navbar',
                 'items' => $menuItems,
                 'encodeLabels' => false,
             ]);
             NavBar::end();
         ?>
-    </header>
 
-    <main>
         <?= $content ?>
-    </main>
+    </div>
 
     <footer>
         <div class="footer" id="footer">

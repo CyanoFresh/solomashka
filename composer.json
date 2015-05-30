@@ -23,7 +23,8 @@
         "2amigos/yii2-gallery-widget": "*",
         "himiklab/yii2-sortable-grid-view-widget": "*",
         "ijackua/yii2-sharelinks-widget": "*",
-        "kartik-v/yii2-icons": "dev-master"
+        "kartik-v/yii2-icons": "dev-master",
+        "rmrevin/yii2-minify-view": "*"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

@@ -17,12 +17,9 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'Clear Cart' => 'Очистить Коризну',
-    'Total cost' => 'Стоимость',
-    'Your order number: {orderNumber}' => 'Ваш номер заказа: {orderNumber}',
-    'Your request was successfully ordered. We will contact you soon' => 'Ваш заказ был успешно оформлен. Мы скоро с Вами свяжемся',
     'Cart' => 'Корзина',
     'Category' => 'Категория',
+    'Clear Cart' => 'Очистить Коризну',
     'Continue shopping' => 'Продолжить покупки',
     'Count of products' => 'Количество товаров',
     'Image' => 'Фото',
@@ -33,4 +30,7 @@ return [
     'Product' => 'Товар',
     'Reset' => 'Очистить',
     'Summary' => 'Информация',
+    'Total cost' => 'Стоимость',
+    'Your order number: {orderNumber}' => 'Ваш номер заказа: {orderNumber}',
+    'Your request was successfully ordered. We will contact you soon' => 'Ваш заказ был успешно оформлен. Мы скоро с Вами свяжемся',
 ];

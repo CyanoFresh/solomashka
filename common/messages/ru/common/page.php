@@ -17,14 +17,11 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'Categories' => 'Категории',
-    'Login' => 'Войти',
-    'Logout ({username})' => 'Выйти ({username})',
-    'Orders' => 'Заказы',
-    'Pages' => 'Страницы',
-    'Products' => 'Товары',
-    'Shop' => 'Магазин',
-    'Slides' => 'Слайдер',
-    'Statuses' => 'Статусы',
-    'View site' => 'На сайт',
+    'Body' => 'Содержимое',
+    'ID' => 'ID',
+    'Meta Description' => 'Meta Описание',
+    'Meta Keywords' => 'Meta Ключевые слова',
+    'Name' => 'Название',
+    'Show in menu' => 'Показывать в меню',
+    'URL' => 'URL',
 ];

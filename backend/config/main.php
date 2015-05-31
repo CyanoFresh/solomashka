@@ -53,6 +53,8 @@ return [
                 'cart/add/<id:\d+>' => 'cart/add',
                 'cart/remove/<id:\d+>' => 'cart/remove',
                 'cart/clear' => 'cart/clear',
+                // Page
+                'page/<slug>' => 'page/view',
                 // Catalog
                 'catalog/page/<page:\d+>' => 'catalog/index',
                 'catalog' => 'catalog/index',

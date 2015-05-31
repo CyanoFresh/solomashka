@@ -34,10 +34,16 @@ AppAsset::register($this);
             $menuItems = [
                 ['label' => Yii::t('frontend', 'Home'), 'url' => ['site/index']],
                 ['label' => Yii::t('frontend', 'Catalog'), 'url' => ['catalog/index']],
-                [
-                    'label' => Yii::t('frontend', 'Cart') . '&nbsp' . Html::tag('span', Yii::$app->cart->getCount(), ['class' => 'badge']),
-                    'url' => ['cart/index'],
-                ],
+            ];
+            foreach (\common\models\Page::findAll(['menu' => true]) as $page) {
+                $menuItems[] = [
+                    'label' => $page->name,
+                    'url' => ['page/view', 'slug' => $page->slug],
+                ];
+            }
+            $menuItems[] = [
+                'label' => Yii::t('frontend', 'Cart') . '&nbsp' . Html::tag('span', Yii::$app->cart->getCount(), ['class' => 'badge']),
+                'url' => ['cart/index'],
             ];
             echo Nav::widget([
                 'options' => ['class' => 'navbar-nav navbar-right'],

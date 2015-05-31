@@ -3,8 +3,8 @@ return [
     'sourcePath' => __DIR__. '..' . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR,
     'languages' => ['ru'],
     'translator' => 'Yii::t',
-    'sort' => false,
-    'removeUnused' => false,
+    'sort' => true,
+    'removeUnused' => true,
     'only' => ['*.php'],
     'except' => [
         '.svn',

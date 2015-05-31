@@ -17,19 +17,16 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    '- select category -' => '- выберите категорию -',
-    '- select status -' => '- выберите статус -',
-    'Browse' => 'Выбрать',
     'Create' => 'Добавить',
-    'Create Product' => 'Добавить Товар',
+    'Create Page' => 'Добавить страницу',
     'Delete' => 'Удалить',
-    'If empty it will be generated from name' => 'Если не указать - будет сгенерировано с имени',
-    'Products' => 'Товары',
+    'No' => 'Нет',
+    'Pages' => 'Страницы',
     'Reset' => 'Очистить',
-    'Save' => 'Сохранить',
     'Search' => 'Поиск',
-    'Search Products' => 'Поиск Товаров',
+    'Search Pages' => 'Поиск страниц',
     'Update' => 'Редактировать',
-    'Update product: ' => 'Редактировать товар: ',
+    'Update page: ' => 'Редактировать страницу: ',
     'View on site' => 'Посмотреть на сайте',
+    'Yes' => 'Да',
 ];

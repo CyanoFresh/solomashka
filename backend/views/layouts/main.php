@@ -43,7 +43,8 @@ $newOrders = Order::find()->where(['status' => Order::STATUS_NEW])->count();
                 ['label' => Yii::t('backend', 'Categories'), 'url' => ['category/index']],
                 ['label' => Yii::t('backend', 'Statuses'), 'url' => ['status/index']],
             ]],
-            ['label' => Yii::t('backend', 'Slides'), 'url' => ['/slide/index']],
+            ['label' => Yii::t('backend', 'Slides'), 'url' => ['slide/index']],
+            ['label' => Yii::t('backend', 'Pages'), 'url' => ['page/index']],
             [
                 'label' => Yii::t('backend', 'Orders')
                     . ' '

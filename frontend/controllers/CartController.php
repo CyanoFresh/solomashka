@@ -72,8 +72,8 @@ class CartController extends Controller
                         'model' => $model,
                         'dataProvider' => $dataProvider,
                     ])
-                    ->setFrom('alex@solomaha.me')
-                    ->setTo('cyanofresh@gmail.com')
+                    ->setFrom(Yii::$app->params['email']['from'])
+                    ->setTo(Yii::$app->params['email']['to'])
                     ->setSubject('На сайте размещен новый заказ')
                     ->send();
 

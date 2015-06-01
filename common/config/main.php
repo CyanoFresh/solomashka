@@ -6,8 +6,6 @@ return [
         'db' => [
             'charset' => 'utf8',
             'enableSchemaCache' => true,
-            'schemaCacheDuration' => 3600,
-            'schemaCache' => 'cache',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -27,10 +25,10 @@ return [
         ],
         'view' => [
             'class' => '\rmrevin\yii\minify\View',
-            'enableMinify' => false,
+            'enableMinify' => !YII_DEBUG,
             'web_path' => '@web', // path alias to web base
             'base_path' => '@webroot', // path alias to web base
-            'minify_path' => '@webroot/minify', // path alias to save minify result
+            'minify_path' => '@webroot/assets', // path alias to save minify result
             'js_position' => [ \yii\web\View::POS_END ], // positions of js files to be minified
             'force_charset' => 'UTF-8', // charset forcibly assign, otherwise will use all of the files found charset
             'expand_imports' => true, // whether to change @import on content

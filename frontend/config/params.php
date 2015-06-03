@@ -7,4 +7,8 @@ return [
         'vk' => 'http://vk.com/solomashkaelena',
         'facebook' => 'https://www.facebook.com/solomashkaelena',
     ],
+    'email' => [
+        'to' => 'cyanofresh@gmail.com, kievcraft@ya.ru, alikosina@gmail.com',
+        'from' => ['info@solomashka.com' => 'Solomashka.com'],
+    ]
 ];

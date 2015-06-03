@@ -26,6 +26,6 @@ class m150601_202439_create_page_table extends Migration
 
     public function safeDown()
     {
-        $this->dropTable('{{%status}}');
+        $this->dropTable('{{%page}}');
     }
 }

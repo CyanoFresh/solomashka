@@ -6,6 +6,7 @@ use common\models\Image;
 use Yii;
 use common\models\Product;
 use common\models\ProductSearch;
+use yii\imagine\Image as Imagine;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\AccessControl;
@@ -89,6 +90,19 @@ class ProductController extends Controller
                 // Save main image
                 $model->image->saveAs($dir . '/main.jpg');
 
+                $watermark = imagecreatefrompng(Yii::getAlias('@frontend/web/uploads/product/watermark.png'));
+                $watermark_width = imagesx($watermark);
+                $watermark_height = imagesy($watermark);
+
+                $size = getimagesize($dir . '/main.jpg');
+
+                $startx = $size[0] - $watermark_width;
+                $starty = $size[1] - $watermark_height;
+
+                Imagine::watermark($dir . '/main.jpg', '@frontend/web/uploads/product/watermark.png', [
+                    $startx, $starty
+                ]) ->save($dir . '/main.jpg', ['quality' => 100]);
+
                 // Save images
                 if ($model->images) {
                     foreach ($model->images as $image) {
@@ -97,6 +111,19 @@ class ProductController extends Controller
                         $imageModel->save();
 
                         $image->saveAs($dir . '/' . $imageModel->id . '.jpg');
+
+                        $watermark = imagecreatefrompng(Yii::getAlias('@frontend/web/uploads/product/watermark.png'));
+                        $watermark_width = imagesx($watermark);
+                        $watermark_height = imagesy($watermark);
+
+                        $size = getimagesize($dir . '/' . $imageModel->id . '.jpg');
+
+                        $startx = $size[0] - $watermark_width;
+                        $starty = $size[1] - $watermark_height;
+
+                        Imagine::watermark($dir . '/' . $imageModel->id . '.jpg', '@frontend/web/uploads/product/watermark.png', [
+                            $startx, $starty
+                        ]) ->save($dir . '/' . $imageModel->id . '.jpg', ['quality' => 100]);
                     }
                 }
             }
@@ -127,7 +154,21 @@ class ProductController extends Controller
                 $dir = Yii::getAlias('@frontend/web/uploads/product/' . $model->id);
 
                 if ($model->image) {
+                    // Save main image
                     $model->image->saveAs($dir . '/main.jpg');
+
+                    $watermark = imagecreatefrompng(Yii::getAlias('@frontend/web/uploads/product/watermark.png'));
+                    $watermark_width = imagesx($watermark);
+                    $watermark_height = imagesy($watermark);
+
+                    $size = getimagesize($dir . '/main.jpg');
+
+                    $startx = $size[0] - $watermark_width;
+                    $starty = $size[1] - $watermark_height;
+
+                    Imagine::watermark($dir . '/main.jpg', '@frontend/web/uploads/product/watermark.png', [
+                        $startx, $starty
+                    ]) ->save($dir . '/main.jpg', ['quality' => 100]);
                 }
 
                 if ($model->images) {
@@ -150,6 +191,19 @@ class ProductController extends Controller
                         $imageModel->save();
 
                         $image->saveAs($dir . '/' . $imageModel->id . '.jpg');
+
+                        $watermark = imagecreatefrompng(Yii::getAlias('@frontend/web/uploads/product/watermark.png'));
+                        $watermark_width = imagesx($watermark);
+                        $watermark_height = imagesy($watermark);
+
+                        $size = getimagesize($dir . '/' . $imageModel->id . '.jpg');
+
+                        $startx = $size[0] - $watermark_width;
+                        $starty = $size[1] - $watermark_height;
+
+                        Imagine::watermark($dir . '/' . $imageModel->id . '.jpg', '@frontend/web/uploads/product/watermark.png', [
+                            $startx, $starty
+                        ]) ->save($dir . '/' . $imageModel->id . '.jpg', ['quality' => 100]);
                     }
                 }
             }

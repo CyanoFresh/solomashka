@@ -17,15 +17,6 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'All rights reserved' => 'Все права защищены',
-    'Cart' => 'Корзина',
-    'Catalog' => 'Каталог',
-    'Home' => 'Главная',
     'Search' => 'Поиск',
-    'Shop' => 'Магазин',
-    'Stay In Touch' => 'Подписка',
-    'Subscribe' => 'Подписаться',
-    'The requested page does not exist.' => 'Запрашиваемая страница не существует.',
-    'This email is already subscribed' => 'На этот email уже была оформлена подписка',
-    'You have successfully subscribed to our updates and news!' => 'Вы успешно подписались на наши обновления и новости!',
+    'Searching results:' => 'Результаты поиска:',
 ];

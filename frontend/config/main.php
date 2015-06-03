@@ -32,6 +32,7 @@ return [
                 // Site
                 '/' => 'site/index',
                 '/subscribe' => 'site/subscribe',
+                '/search' => 'search/index',
                 'sitemap.xml' => 'sitemap/index',
                 // Cart
                 'cart' => 'cart/index',

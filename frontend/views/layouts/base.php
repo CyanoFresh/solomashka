@@ -51,6 +51,10 @@ $model = new Subscriber();
                 ];
             }
             $menuItems[] = [
+                'label' => Yii::t('frontend', 'Search'),
+                'url' => ['search/index'],
+            ];
+            $menuItems[] = [
                 'label' => \kartik\icons\Icon::show('shopping-cart') . Yii::t('frontend', 'Cart') . '&nbsp' . Html::tag('span', Yii::$app->cart->getCount(), ['class' => 'badge']),
                 'url' => ['cart/index'],
             ];
@@ -93,6 +97,7 @@ $model = new Subscriber();
                             <?php foreach (Page::find()->all() as $page): ?>
                             <li><?= Html::a($page->name, ['page/view', 'slug' => $page->slug]) ?></li>
                             <?php endforeach ?>
+                            <li><?= Html::a(Yii::t('frontend', 'Search'), ['search/index']) ?></li>
                             <li><?= Html::a(Yii::t('frontend', 'Cart'), ['cart/index']) ?></li>
                         </ul>
                     </div>

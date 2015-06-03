@@ -62,8 +62,6 @@ class ProductSearch extends Product
             return $dataProvider;
         }
 
-        //$query->joinWith('category');
-
         $query->andFilterWhere([
             'id' => $this->id,
             'category_id' => $this->category_id,

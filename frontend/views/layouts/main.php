@@ -1,4 +1,5 @@
 <?php
+use frontend\widgets\Alert;
 use yii\widgets\Breadcrumbs;
 
 /* @var $this \yii\web\View */
@@ -10,6 +11,9 @@ use yii\widgets\Breadcrumbs;
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
+
+        <?= Alert::widget() ?>
+
         <?= $content ?>
     </div>
 <?php $this->endContent(); ?>

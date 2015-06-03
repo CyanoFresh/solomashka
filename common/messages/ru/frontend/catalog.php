@@ -28,5 +28,5 @@ return [
     'Share on Google Plus' => 'Поделиться в Google+',
     'Share on Twitter' => 'Поделиться в Твиттере',
     'Share on VK' => 'Поделиться в ВКонтакте',
-    'View' => 'Подробенее',
+    'View' => 'Подробнее',
 ];

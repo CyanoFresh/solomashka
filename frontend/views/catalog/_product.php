@@ -33,7 +33,7 @@ use yii\helpers\Html;
                 ]) ?>
             </p>
 
-            <p><?= Yii::$app->formatter->asCurrency($model->price) ?></p>
+            <p><b><?= Yii::$app->formatter->asCurrency($model->price) ?></b></p>
 
             <?= Html::a(Yii::t('frontend/catalog', 'View'), ['catalog/view', 'slug' => $model->slug, 'category' => $model->category->slug], [
                 'class' => 'btn btn-primary',

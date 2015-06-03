@@ -17,15 +17,8 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'Categories' => 'Категории',
-    'Login' => 'Войти',
-    'Logout ({username})' => 'Выйти ({username})',
-    'Orders' => 'Заказы',
-    'Pages' => 'Страницы',
-    'Products' => 'Товары',
-    'Shop' => 'Магазин',
-    'Slides' => 'Слайдер',
-    'Statuses' => 'Статусы',
-    'Subscribers' => 'Подписчики',
-    'View site' => 'На сайт',
+    'Date' => 'Дата',
+    'Email' => 'Email',
+    'ID' => 'ID',
+    'Name' => 'Имя',
 ];

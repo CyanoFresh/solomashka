@@ -31,6 +31,7 @@ return [
             'rules' => [
                 // Site
                 '/' => 'site/index',
+                '/subscribe' => 'site/subscribe',
                 'sitemap.xml' => 'sitemap/index',
                 // Cart
                 'cart' => 'cart/index',

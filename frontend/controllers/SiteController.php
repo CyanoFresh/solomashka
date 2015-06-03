@@ -2,6 +2,7 @@
 namespace frontend\controllers;
 
 use common\models\Product;
+use common\models\Subscriber;
 use Yii;
 use yii\data\ArrayDataProvider;
 use yii\web\Controller;
@@ -33,5 +34,30 @@ class SiteController extends Controller
         return $this->render('index', [
             'dataProvider' => $dataProvider,
         ]);
+    }
+
+    public function actionSubscribe()
+    {
+        $model = new Subscriber();
+        $model->date = date('Y-m-d H:i');
+
+        if ($model->load(Yii::$app->request->post())) {
+            if ($model->validate() && $model->save()) {
+                $msg =
+                    Yii::t('frontend', 'You have successfully subscribed to our updates and news!');
+                $type = 'success';
+            } else {
+                $msg =
+                    Yii::t('frontend', 'This email is already subscribed');
+                $type = 'danger';
+            }
+
+            return $this->render('subscribe', [
+                'model' => $model,
+                'msg' => $msg,
+                'type' => $type,
+            ]);
+        }
+        return $this->redirect(['site/index']);
     }
 }

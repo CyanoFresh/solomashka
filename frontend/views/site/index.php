@@ -1,4 +1,5 @@
 <?php
+use frontend\widgets\Alert;
 use yii\bootstrap\Carousel;
 use yii\helpers\Html;
 use yii\widgets\ListView;
@@ -32,6 +33,8 @@ foreach (Slide::find()->orderBy('sortOrder')->all() as $slide) {
 ]) ?>
 
 <div class="container">
+
+    <?= Alert::widget() ?>
 
     <h1 class="page-header text-center">
         <?= Yii::t('frontend/site', 'Last products') ?>

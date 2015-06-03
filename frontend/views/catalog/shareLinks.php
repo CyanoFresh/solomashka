@@ -4,9 +4,6 @@ use yii\helpers\Html;
 use kartik\icons\Icon;
 
 /* @var $this yii\web\View */
-
-// FontAwesome icons
-Icon::map($this, Icon::FA);
 ?>
 
 <div class="socialShareBlock">

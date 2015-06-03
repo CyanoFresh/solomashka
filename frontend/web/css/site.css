@@ -1,9 +1,69 @@
+html,
+body {
+    height: 100%;
+    background: url("../img/bg.jpg") repeat;
+}
+
+.wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -100px;
+    padding: 0 0 100px;
+}
+
+.wrap > .container {
+    padding: 100px 15px 20px;
+}
+
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
 th {
-    background: #f5f5f5;
+    background: #fff;
+}
+
+.table-striped > tbody > tr:nth-child(even) {
+    background-color: #fff;
+}
+
+/* Top Menu */
+.navbar .navbar-top {
+    height: 30px;
+    background: #0080FF;
+}
+
+ul, ol {
+     list-style: none;
+     margin: 0;
+     padding: 0;
+}
+
+.userMenu {
+    display: inline;
+}
+
+.userMenu li {
+    display: block;
+    float: left;
+}
+
+.userMenu li a {
+    color: #FFFFFF;
+    display: block;
+    float: right;
+    font-size: 12px;
+    line-height: 30px;
+    padding: 0 20px 0 0;
+    text-decoration: none;
+}
+
+.soclink {
+    padding: 0 !important;
+}
+
+.phone-number span {
+    float: left;
 }
 
 /* Footer */
@@ -17,7 +77,7 @@ th {
     display: block;
 }
 .footer {
-    background: #EDEFF1;
+    background: #fff;
     height: auto;
     padding-bottom: 30px;
     position: relative;
@@ -37,7 +97,7 @@ th {
     font-size: 18px;
     font-weight: 600;
     line-height: 27px;
-    padding: 40px 0 10px;
+    padding: 20px 0 10px;
     text-transform: uppercase;
 }
 .footer ul {
@@ -46,7 +106,7 @@ th {
     margin-left: 0;
     padding-left: 0;
     margin-top: 15px;
-    color: #7F8C8D;
+    /*color: #7F8C8D;*/
 }
 .footer ul li a {
     padding: 0 0 5px 0;
@@ -63,7 +123,7 @@ th {
     padding-bottom: 0;
 }
 .footer-bottom {
-    background: #E3E3E3;
+    background: #f5f5f5;
     border-top: 1px solid #DDDDDD;
     padding-top: 10px;
     padding-bottom: 10px;

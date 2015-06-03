@@ -90,7 +90,7 @@ class ProductController extends Controller
                 // Save main image
                 $model->image->saveAs($dir . '/main.jpg');
 
-                $watermark = imagecreatefrompng(Yii::getAlias('@frontend/web/uploads/product/watermark.png'));
+                $watermark = imagecreatefrompng(Yii::getAlias('@frontend/web/uploads/watermark.png'));
                 $watermark_width = imagesx($watermark);
                 $watermark_height = imagesy($watermark);
 
@@ -99,7 +99,7 @@ class ProductController extends Controller
                 $startx = $size[0] - $watermark_width;
                 $starty = $size[1] - $watermark_height;
 
-                Imagine::watermark($dir . '/main.jpg', '@frontend/web/uploads/product/watermark.png', [
+                Imagine::watermark($dir . '/main.jpg', '@frontend/web/uploads/watermark.png', [
                     $startx, $starty
                 ]) ->save($dir . '/main.jpg', ['quality' => 100]);
 
@@ -112,7 +112,7 @@ class ProductController extends Controller
 
                         $image->saveAs($dir . '/' . $imageModel->id . '.jpg');
 
-                        $watermark = imagecreatefrompng(Yii::getAlias('@frontend/web/uploads/product/watermark.png'));
+                        $watermark = imagecreatefrompng(Yii::getAlias('@frontend/web/uploads/watermark.png'));
                         $watermark_width = imagesx($watermark);
                         $watermark_height = imagesy($watermark);
 
@@ -121,7 +121,7 @@ class ProductController extends Controller
                         $startx = $size[0] - $watermark_width;
                         $starty = $size[1] - $watermark_height;
 
-                        Imagine::watermark($dir . '/' . $imageModel->id . '.jpg', '@frontend/web/uploads/product/watermark.png', [
+                        Imagine::watermark($dir . '/' . $imageModel->id . '.jpg', '@frontend/web/uploads/watermark.png', [
                             $startx, $starty
                         ]) ->save($dir . '/' . $imageModel->id . '.jpg', ['quality' => 100]);
                     }
@@ -157,7 +157,7 @@ class ProductController extends Controller
                     // Save main image
                     $model->image->saveAs($dir . '/main.jpg');
 
-                    $watermark = imagecreatefrompng(Yii::getAlias('@frontend/web/uploads/product/watermark.png'));
+                    $watermark = imagecreatefrompng(Yii::getAlias('@frontend/web/uploads/watermark.png'));
                     $watermark_width = imagesx($watermark);
                     $watermark_height = imagesy($watermark);
 
@@ -166,7 +166,7 @@ class ProductController extends Controller
                     $startx = $size[0] - $watermark_width;
                     $starty = $size[1] - $watermark_height;
 
-                    Imagine::watermark($dir . '/main.jpg', '@frontend/web/uploads/product/watermark.png', [
+                    Imagine::watermark($dir . '/main.jpg', '@frontend/web/uploads/watermark.png', [
                         $startx, $starty
                     ]) ->save($dir . '/main.jpg', ['quality' => 100]);
                 }
@@ -192,7 +192,7 @@ class ProductController extends Controller
 
                         $image->saveAs($dir . '/' . $imageModel->id . '.jpg');
 
-                        $watermark = imagecreatefrompng(Yii::getAlias('@frontend/web/uploads/product/watermark.png'));
+                        $watermark = imagecreatefrompng(Yii::getAlias('@frontend/web/uploads/watermark.png'));
                         $watermark_width = imagesx($watermark);
                         $watermark_height = imagesy($watermark);
 
@@ -201,7 +201,7 @@ class ProductController extends Controller
                         $startx = $size[0] - $watermark_width;
                         $starty = $size[1] - $watermark_height;
 
-                        Imagine::watermark($dir . '/' . $imageModel->id . '.jpg', '@frontend/web/uploads/product/watermark.png', [
+                        Imagine::watermark($dir . '/' . $imageModel->id . '.jpg', '@frontend/web/uploads/watermark.png', [
                             $startx, $starty
                         ]) ->save($dir . '/' . $imageModel->id . '.jpg', ['quality' => 100]);
                     }

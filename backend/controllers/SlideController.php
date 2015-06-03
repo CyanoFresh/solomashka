@@ -143,7 +143,7 @@ class SlideController extends Controller
     {
         $model = $this->findModel($id);
 
-        unlink(Yii::getAlias('@frontend/web/uploads/slide/') . $model->id . '.jpg');
+        @unlink(Yii::getAlias('@frontend/web/uploads/slide/') . $model->id . '.jpg');
 
         $model->delete();
 

@@ -30,7 +30,7 @@ th {
 /* Top Menu */
 .navbar .navbar-top {
     height: 30px;
-    background: #0080FF;
+    background: #8BE5B5;
 }
 
 ul, ol {
@@ -49,7 +49,7 @@ ul, ol {
 }
 
 .userMenu li a {
-    color: #FFFFFF;
+    /*color: #FFFFFF;*/
     display: block;
     float: right;
     font-size: 12px;

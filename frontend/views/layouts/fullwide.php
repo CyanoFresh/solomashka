@@ -4,7 +4,7 @@ use yii\widgets\Breadcrumbs;
 /* @var $this \yii\web\View */
 /* @var $content string */
 
-$this->registerCss("body { padding-top: 45px; }");
+$this->registerCss("body { padding-top: 75px; }");
 
 $this->beginContent('@app/views/layouts/base.php');
 

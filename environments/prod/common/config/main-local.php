@@ -11,9 +11,15 @@ return [
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
             'viewPath' => '@common/mail',
-        ],
-        'formatter' => [
-            'currencyCode' => 'USD',
+            'useFileTransport' => false,
+            'transport' => [
+                'class' => 'Swift_SmtpTransport',
+                'host' => '',
+                'username' => '',
+                'password' => '',
+                'port' => '465',
+                'encryption' => 'ssl',
+            ],
         ],
     ],
 ];

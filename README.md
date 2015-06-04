@@ -1,39 +1,14 @@
-Yii2Shop
+Solomashka
 ===================================
 
-This is e-commerce application built on Yii2. It is not full e-commerce - it is showcase
+This is e-commerce application built on Yii2Shop.
 
-FEATURES
---------
-
-Because it's only e-commerce showcase - only several features available:
-* Admin Panel - Backend
-* Home page with latest products
-* Catalog with sorting and product preview
-* Categories support
-* SEO-friendly URLs (with slugs like domain.com/categoryname/productname)
-* Special statuses for products (example: In stock, Discount, etc.)
-* Image gallery in product view
-* And a lot of! See demo for more details, maybe I forget something
-
-DEMO
-----
-
-[FrontEnd Demo](http://yii2shop.solomaha.me/)
-
-[BackEnd Demo](http://admin.yii2shop.solomaha.me/)
-
-Login: `admin`
-
-Password: `admin`
-
-Please don't clear shop content ^)
-
+[Demo](http://shop.solomaha.me/)
 
 REQUIREMENTS
 ------------
 
-The minimum requirement by this application template that your Web server supports PHP 5.4.0.
+The minimum requirement by this application template that your Web server supports PHP 5.4.0. Also required composer, git.
 
 
 INSTALLATION
@@ -41,17 +16,17 @@ INSTALLATION
 
 Run in the command line:
 
-`git clone https://github.com/CyanoFresh/yii2shop.git yii2shop`
+`git clone https://github.com/CyanoFresh/solomashka.git shop`
 
 Go to the application dir and run:
 
-`php requirements.php`
-
-to check application requirements and run:
-
 `composer install`
 
-to install dependencies.
+to install dependencies and run:
+
+`php requirements.php`
+
+to check application requirements.
 
 After you install the application, you have to conduct the following steps to initialize
 the installed application. You only need to do these once for all.

@@ -33,9 +33,6 @@ $this->title = Yii::t('backend/order', 'Order #{orderID}', [
 <?= GridView::widget([
     'dataProvider' => $dataProvider,
     'layout' => '{items}',
-    'tableOptions' => [
-        'border' => 1
-    ],
     'columns' => [
         [
             'attribute' => 'image',
@@ -56,7 +53,7 @@ $this->title = Yii::t('backend/order', 'Order #{orderID}', [
             'attribute' => 'name',
             'format' => 'html',
             'value' => function ($model) {
-                return Html::a($model->name, Url::to(['product/view', 'id' => $model->id], true));
+                return Html::a($model->name, Url::to(['catalog/view', 'slug' => $model->slug], true));
             },
         ],
         'price:currency',

@@ -8,8 +8,14 @@ use yii\helpers\Html;
 <div class="<?= $class ?>">
     <div class="panel panel-default panel-product">
         <div class="panel-image">
-            <?= Html::img($model->mainImage, [
+            <?= Html::a(Html::img($model->mainImage, [
                 'class' => 'img-responsive',
+            ]), [
+                'catalog/view',
+                'category' => $model->category->slug,
+                'slug' => $model->slug
+            ], [
+                'class' => 'no-link',
             ]) ?>
 
             <?php if ($model->status_id): ?>
@@ -24,7 +30,13 @@ use yii\helpers\Html;
         </div>
         <div class="panel-body">
             <h4>
-                <?= Html::encode($model->name) ?>
+                <?= Html::a(Html::encode($model->name), [
+                    'catalog/view',
+                    'slug' => $model->slug,
+                    'category' => $model->category->slug,
+                ], [
+                    'class' => 'no-link'
+                ]) ?>
             </h4>
 
             <p class="text-muted">

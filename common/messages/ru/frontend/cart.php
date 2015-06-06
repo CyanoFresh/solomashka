@@ -27,7 +27,7 @@ return [
     'Order' => 'Оформление заказа',
     'Ordered successful' => 'Заказ успешно оформлен',
     'Price' => 'Цена',
-    'Product' => 'Товар',
+    'Product' => 'Название',
     'Reset' => 'Очистить',
     'Summary' => 'Информация',
     'Total cost' => 'Стоимость',

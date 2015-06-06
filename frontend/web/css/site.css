@@ -16,7 +16,9 @@ body {
 }
 
 .navbar .badge {
-    background: #1f1f1f;
+    background: #fff;
+    color: #151273;
+    font-weight: bold;
 }
 
 .no-link {

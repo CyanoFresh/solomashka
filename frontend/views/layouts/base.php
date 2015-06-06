@@ -1,7 +1,6 @@
 <?php
 use common\models\Page;
-use common\models\Subscriber;
-use kartik\form\ActiveForm;
+use frontend\widgets\Form;
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use frontend\components\NavBar;
@@ -15,8 +14,6 @@ AppAsset::register($this);
 
 // FontAwesome icons
 Icon::map($this, Icon::FA);
-
-$model = new Subscriber();
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -105,22 +102,7 @@ $model = new Subscriber();
                     <div class="col-sm-4">
                         <h3><?= Yii::t('frontend', 'Stay In Touch') ?></h3>
 
-                        <?php $form = ActiveForm::begin([
-                            'action' => ['site/subscribe'],
-                        ]) ?>
-                        <?= $form->field($model, 'email')->input('email') ?>
-                        <div class="row">
-                            <div class="col-sm-7">
-                                <?= $form->field($model, 'name')->textInput(['maxlength' => '255']) ?>
-                            </div>
-                            <div class="col-sm-5">
-                                <?= Html::submitButton(Yii::t('frontend', 'Subscribe'), [
-                                    'class' => 'btn btn-primary btn-block',
-                                    'style' => 'margin-top: 25px'
-                                ]) ?>
-                            </div>
-                        </div>
-                        <?php ActiveForm::end() ?>
+                        <?= Form::widget() ?>
                     </div>
                 </div>
                 <!--/.row-->

@@ -4,8 +4,10 @@ namespace frontend\controllers;
 use common\models\Product;
 use common\models\Subscriber;
 use Yii;
+use yii\bootstrap\Alert;
 use yii\data\ArrayDataProvider;
 use yii\web\Controller;
+use yii\web\Response;
 
 /**
  * Site controller
@@ -36,28 +38,44 @@ class SiteController extends Controller
         ]);
     }
 
+    /**
+     * Handle Subscribe Form via Ajax
+     *
+     * @return array|Response json result
+     */
     public function actionSubscribe()
     {
         $model = new Subscriber();
         $model->date = date('Y-m-d H:i');
 
-        if ($model->load(Yii::$app->request->post())) {
+        if ($model->load(Yii::$app->request->post()) && Yii::$app->request->isAjax) {
             if ($model->validate() && $model->save()) {
                 $msg =
                     Yii::t('frontend', 'You have successfully subscribed to our updates and news!');
+
                 $type = 'success';
+
+                Yii::$app->session->set('subscribed', $msg);
             } else {
                 $msg =
                     Yii::t('frontend', 'This email is already subscribed');
+
                 $type = 'danger';
             }
 
-            return $this->render('subscribe', [
-                'model' => $model,
-                'msg' => $msg,
-                'type' => $type,
+            Yii::$app->response->format = Response::FORMAT_JSON;
+
+            $body = Alert::widget([
+                'body' => $msg,
+                'options' => ['class' => 'alert-' . $type]
             ]);
+
+            return [
+                'body' => $body,
+                'type' => $type,
+            ];
         }
+
         return $this->redirect(['site/index']);
     }
 }

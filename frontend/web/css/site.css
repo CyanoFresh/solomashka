@@ -42,7 +42,16 @@ th {
 }
 
 /* Top Menu */
+.navbar.stuck .navbar-top {
+    margin-top: -30px;
+}
+
 .navbar .navbar-top {
+    transition: all 0.1s ease-out 0s;
+    -webkit-transition: all 0.1s ease-out 0s;
+    -moz-transition: all 0.1s ease-out 0s;
+    -ms-transition: all 0.1s ease-out 0s;
+    -o-transition: all 0.1s ease-out 0s;
     height: 30px;
     background: #8BE5B5;
 }

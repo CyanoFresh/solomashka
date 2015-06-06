@@ -24,7 +24,8 @@ use yii\widgets\ActiveForm;
             'removeLabel' => Yii::t('backend/slide', 'Delete'),
             'removeClass' => 'btn btn-danger',
             'initialPreview' => $model->isNewRecord ? false : [
-                Html::img(Yii::$app->urlManagerFrontEnd->baseUrl . '/uploads/slide/' . $model->id . '.jpg', ['class' => 'file-preview-image'])
+                Html::img(Yii::$app->urlManagerFrontEnd->baseUrl . '/uploads/slide/' . $model->id . '.jpg',
+                    ['class' => 'file-preview-image'])
             ],
         ],
     ]) ?>

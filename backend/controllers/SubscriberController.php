@@ -2,13 +2,13 @@
 
 namespace backend\controllers;
 
-use Yii;
 use common\models\Subscriber;
 use common\models\SubscriberSearch;
-use yii\web\Controller;
-use yii\web\NotFoundHttpException;
+use Yii;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
+use yii\web\Controller;
+use yii\web\NotFoundHttpException;
 
 /**
  * SubscriberController implements the CRUD actions for Subscriber model.
@@ -22,7 +22,7 @@ class SubscriberController extends Controller
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['index', 'view', 'create', 'update' , 'delete'],
+                        'actions' => ['index', 'view', 'create', 'update', 'delete'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],

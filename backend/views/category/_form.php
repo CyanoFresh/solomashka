@@ -1,9 +1,9 @@
 <?php
 
-use yii\helpers\ArrayHelper;
-use yii\helpers\Html;
 use kartik\widgets\ActiveForm;
 use vova07\imperavi\Widget as Imperavi;
+use yii\helpers\ArrayHelper;
+use yii\helpers\Html;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\Category */

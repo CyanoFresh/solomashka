@@ -3,12 +3,12 @@
 use common\models\Category;
 use common\models\Image;
 use common\models\Status;
-use kartik\widgets\FileInput;
 use kartik\widgets\ActiveForm;
+use kartik\widgets\DateTimePicker;
+use kartik\widgets\FileInput;
+use vova07\imperavi\Widget as Imperavi;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
-use vova07\imperavi\Widget as Imperavi;
-use kartik\widgets\DateTimePicker;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\Product */

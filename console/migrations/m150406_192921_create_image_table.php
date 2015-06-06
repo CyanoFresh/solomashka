@@ -1,7 +1,7 @@
 <?php
 
-use yii\db\Schema;
 use yii\db\Migration;
+use yii\db\Schema;
 
 class m150406_192921_create_image_table extends Migration
 {

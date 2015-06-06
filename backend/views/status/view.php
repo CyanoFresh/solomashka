@@ -15,7 +15,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1 class="page-header">
         <?= Html::encode($this->title) ?>
         <div class="btn-group pull-right">
-            <?= Html::a('<span class="glyphicon glyphicon-pencil"></span>', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+            <?= Html::a('<span class="glyphicon glyphicon-pencil"></span>', ['update', 'id' => $model->id],
+                ['class' => 'btn btn-primary']) ?>
             <?= Html::a('<span class="glyphicon glyphicon-trash"></span>', ['delete', 'id' => $model->id], [
                 'class' => 'btn btn-danger',
                 'data' => [

@@ -2,14 +2,14 @@
 
 namespace backend\controllers;
 
-use Yii;
 use common\models\Order;
 use common\models\OrderSearch;
+use Yii;
 use yii\data\ArrayDataProvider;
+use yii\filters\AccessControl;
+use yii\filters\VerbFilter;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
-use yii\filters\AccessControl;
 
 /**
  * OrderController implements the CRUD actions for Order model.

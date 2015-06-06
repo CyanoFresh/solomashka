@@ -1,7 +1,7 @@
 <?php
 
-use yii\db\Schema;
 use yii\db\Migration;
+use yii\db\Schema;
 
 class m150406_192909_create_category_table extends Migration
 {
@@ -23,7 +23,7 @@ class m150406_192909_create_category_table extends Migration
             'meta_keywords' => Schema::TYPE_STRING . ' NOT NULL',
         ], $tableOptions);
     }
-    
+
     public function safeDown()
     {
         $this->dropTable('{{%category}}');

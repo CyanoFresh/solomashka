@@ -2,16 +2,16 @@
 
 namespace backend\controllers;
 
-use Yii;
 use common\models\Slide;
 use common\models\SlideSearch;
+use himiklab\sortablegrid\SortableGridAction;
+use Yii;
+use yii\filters\AccessControl;
+use yii\filters\VerbFilter;
+use yii\helpers\FileHelper;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\web\UploadedFile;
-use yii\filters\AccessControl;
-use yii\helpers\FileHelper;
-use yii\filters\VerbFilter;
-use himiklab\sortablegrid\SortableGridAction;
 
 /**
  * SlideController implements the CRUD actions for Slide model.
@@ -25,7 +25,7 @@ class SlideController extends Controller
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['index', 'view', 'create', 'update' , 'delete'],
+                        'actions' => ['index', 'view', 'create', 'update', 'delete'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],

@@ -12,10 +12,16 @@ $this->params['breadcrumbs'][] = ['label' => Yii::t('frontend/catalog', 'Catalog
 
 if ($model->category->parent) {
     $this->title .= ' - ' . $model->category->parent->name;
-    $this->params['breadcrumbs'][] = ['label' => $model->category->parent->name, 'url' => ['catalog/category', 'category' => $model->category->parent->slug]];
+    $this->params['breadcrumbs'][] = [
+        'label' => $model->category->parent->name,
+        'url' => ['catalog/category', 'category' => $model->category->parent->slug]
+    ];
 }
 
-$this->params['breadcrumbs'][] = ['label' => $model->category->name, 'url' => ['catalog/category', 'category' => $model->category->slug]];
+$this->params['breadcrumbs'][] = [
+    'label' => $model->category->name,
+    'url' => ['catalog/category', 'category' => $model->category->slug]
+];
 $this->params['breadcrumbs'][] = $model->name;
 
 // Meta tags
@@ -87,23 +93,23 @@ foreach (Image::findAll(['model_id' => $model->id]) as $image) {
 
         <div class="panel panel-default">
             <div class="panel-body">
-
-        <div class="row">
-            <div class="col-sm-4">
-                <h4><?= Yii::t('frontend/catalog', 'Share') ?></h4>
-                <?= ijackua\sharelinks\ShareLinks::widget([
-                    'viewName' => '@frontend/views/catalog/shareLinks',
-                ]) ?>
-            </div>
-            <div class="col-sm-4">
-                <h4><?= Yii::t('frontend/catalog', 'Category') ?></h4>
-                <?= Html::a($model->category->name, ['catalog/category', 'category' => $model->category->slug]) ?>
-            </div>
-            <div class="col-sm-4">
-                <h4><?= Yii::t('frontend/catalog', 'Date Created') ?></h4>
-                <?= Yii::$app->formatter->asDatetime($model->date) ?>
-            </div>
-        </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <h4><?= Yii::t('frontend/catalog', 'Share') ?></h4>
+                        <?= ijackua\sharelinks\ShareLinks::widget([
+                            'viewName' => '@frontend/views/catalog/shareLinks',
+                        ]) ?>
+                    </div>
+                    <div class="col-sm-4">
+                        <h4><?= Yii::t('frontend/catalog', 'Category') ?></h4>
+                        <?= Html::a($model->category->name,
+                            ['catalog/category', 'category' => $model->category->slug]) ?>
+                    </div>
+                    <div class="col-sm-4">
+                        <h4><?= Yii::t('frontend/catalog', 'Date Created') ?></h4>
+                        <?= Yii::$app->formatter->asDatetime($model->date) ?>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

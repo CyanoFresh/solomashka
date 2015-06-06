@@ -1,7 +1,7 @@
 <?php
 
-use yii\db\Schema;
 use yii\db\Migration;
+use yii\db\Schema;
 
 class m150601_202439_create_page_table extends Migration
 {

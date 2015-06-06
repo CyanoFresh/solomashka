@@ -2,8 +2,8 @@
 
 namespace common\models;
 
-use Yii;
 use himiklab\sortablegrid\SortableGridBehavior;
+use Yii;
 use yii\db\ActiveRecord;
 
 /**

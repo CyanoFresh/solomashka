@@ -55,9 +55,10 @@ $this->title = Yii::t('yii', 'Home');
             'template' => '{view}',
             'buttons' => [
                 'view' => function ($url, $model, $key) {
-                    return Html::a('<span class="glyphicon glyphicon-eye-open"></span>', ['order/view', 'id' => $model->id], [
-                        'class' => 'btn btn-xs btn-primary'
-                    ]);
+                    return Html::a('<span class="glyphicon glyphicon-eye-open"></span>',
+                        ['order/view', 'id' => $model->id], [
+                            'class' => 'btn btn-xs btn-primary'
+                        ]);
                 },
             ],
         ],
@@ -71,7 +72,8 @@ $this->title = Yii::t('yii', 'Home');
 <div class="panel panel-default">
     <div class="panel-heading" role="tab" id="headingOne">
         <h4 class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion" href="#collapseCategory" aria-expanded="true" aria-controls="collapseOne">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseCategory" aria-expanded="true"
+               aria-controls="collapseOne">
                 <?= Yii::t('backend/site', 'Create Category') ?>
             </a>
         </h4>
@@ -88,7 +90,8 @@ $this->title = Yii::t('yii', 'Home');
 <div class="panel panel-default">
     <div class="panel-heading" role="tab" id="headingOne">
         <h4 class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true"
+               aria-controls="collapseOne">
                 <?= Yii::t('backend/site', 'Create Product') ?>
             </a>
         </h4>

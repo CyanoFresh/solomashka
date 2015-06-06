@@ -17,12 +17,14 @@ use yii\db\ActiveRecord;
  * @property string $email
  * @property string $phone
  * @property string $message
+ * @property array $statuses
  */
 class Order extends ActiveRecord
 {
     const STATUS_NEW = 1;
     const STATUS_REVIEWED = 2;
     const STATUS_PROCESSED = 3;
+
     /**
      * @inheritdoc
      */

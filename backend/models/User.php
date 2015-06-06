@@ -31,13 +31,14 @@ class User extends Object implements IdentityInterface
                 return new static($user);
             }
         }
+
         return null;
     }
 
     /**
      * Finds user by username
      *
-     * @param  string      $username
+     * @param  string $username
      * @return static|null
      */
     public static function findByUsername($username)
@@ -47,6 +48,7 @@ class User extends Object implements IdentityInterface
                 return new static($user);
             }
         }
+
         return null;
     }
 
@@ -77,7 +79,7 @@ class User extends Object implements IdentityInterface
     /**
      * Validates password
      *
-     * @param  string  $password password to validate
+     * @param  string $password password to validate
      * @return boolean if password provided is valid for current user
      */
     public function validatePassword($password)

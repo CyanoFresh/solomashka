@@ -58,7 +58,7 @@ class Product extends ActiveRecord implements CartPositionInterface
             [['slug', 'name', 'meta_description', 'meta_keywords'], 'string', 'max' => 255],
             [['date'], 'safe'],
             [['image'], 'safe'],
-            [['image'], 'image', 'mimeTypes' => 'image/jpeg, image/png', 'extensions'=>'jpg, png'],
+            [['image'], 'image', 'mimeTypes' => 'image/jpeg, image/png', 'extensions' => 'jpg, png'],
             [['image'], 'required', 'on' => 'create'],
             [['images'], 'image', 'maxFiles' => 10],
         ];

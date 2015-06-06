@@ -1,15 +1,15 @@
 <?php
 namespace backend\controllers;
 
+use backend\models\LoginForm;
 use common\models\Category;
 use common\models\Order;
 use common\models\Product;
 use Yii;
 use yii\data\ActiveDataProvider;
 use yii\filters\AccessControl;
-use yii\web\Controller;
-use backend\models\LoginForm;
 use yii\filters\VerbFilter;
+use yii\web\Controller;
 
 /**
  * Site controller

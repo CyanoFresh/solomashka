@@ -1,9 +1,9 @@
 <?php
 
-use kartik\widgets\SwitchInput;
-use yii\helpers\Html;
 use kartik\widgets\ActiveForm;
+use kartik\widgets\SwitchInput;
 use vova07\imperavi\Widget as Imperavi;
+use yii\helpers\Html;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\Page */
@@ -43,7 +43,8 @@ use vova07\imperavi\Widget as Imperavi;
     <?= $form->field($model, 'meta_keywords')->textInput(['maxlength' => 255]) ?>
 
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? Yii::t('backend/page', 'Create') : Yii::t('backend/page', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+        <?= Html::submitButton($model->isNewRecord ? Yii::t('backend/page', 'Create') : Yii::t('backend/page',
+            'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

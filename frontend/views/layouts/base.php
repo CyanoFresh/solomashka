@@ -1,11 +1,11 @@
 <?php
 use common\models\Page;
-use frontend\widgets\Form;
-use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use frontend\components\NavBar;
 use frontend\assets\AppAsset;
+use frontend\components\NavBar;
+use frontend\widgets\Form;
 use kartik\icons\Icon;
+use yii\bootstrap\Nav;
+use yii\helpers\Html;
 
 /* @var $this \yii\web\View */
 /* @var $content string */
@@ -14,7 +14,15 @@ AppAsset::register($this);
 
 // FontAwesome icons
 Icon::map($this, Icon::FA);
+
+// Page models
+$pages = Page::findAll(['menu' => true]);
 ?>
+<!--
+Solomashka.com built on Yii2 Framework
+@author Alex Solomaha <cyanofresh@gmail.com> (CyanoFresh)
+@link http://solomaha.me/
+-->
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
@@ -29,44 +37,46 @@ Icon::map($this, Icon::FA);
     <?php $this->beginBody() ?>
     <div class="wrap">
         <?php
-            NavBar::begin([
-                'id' => 'menu',
-                'brandLabel' => Yii::$app->name,
-                'brandUrl' => Yii::$app->homeUrl,
-                'options' => [
-                    'class' => 'navbar-inverse navbar-fixed-top',
-                ],
-            ]);
-            $menuItems = [
-                ['label' => Yii::t('frontend', 'Home'), 'url' => ['site/index']],
-                ['label' => Yii::t('frontend', 'Catalog'), 'url' => ['catalog/index']],
-            ];
-            foreach (Page::findAll(['menu' => true]) as $page) {
-                $menuItems[] = [
-                    'label' => $page->name,
-                    'url' => ['page/view', 'slug' => $page->slug],
-                ];
-            }
+        NavBar::begin([
+            'id' => 'menu',
+            'brandLabel' => Yii::$app->name,
+            'brandUrl' => Yii::$app->homeUrl,
+            'options' => [
+                'class' => 'navbar-inverse navbar-fixed-top',
+            ],
+        ]);
+        $menuItems = [
+            ['label' => Yii::t('frontend', 'Home'), 'url' => ['site/index']],
+            ['label' => Yii::t('frontend', 'Catalog'), 'url' => ['catalog/index']],
+        ];
+        foreach ($pages as $page) {
             $menuItems[] = [
-                'label' => Yii::t('frontend', 'Search'),
-                'url' => ['search/index'],
+                'label' => $page->name,
+                'url' => ['page/view', 'slug' => $page->slug],
             ];
-            $menuItems[] = [
-                'label' => \kartik\icons\Icon::show('shopping-cart') . Yii::t('frontend', 'Cart') . '&nbsp' . Html::tag('span', Yii::$app->cart->getCount(), ['class' => 'badge']),
-                'url' => ['cart/index'],
-            ];
-            echo Nav::widget([
-                'options' => ['class' => 'navbar-nav navbar-right'],
-                'id' => 'menu-navbar',
-                'items' => $menuItems,
-                'encodeLabels' => false,
-            ]);
-            NavBar::end();
+        }
+        $menuItems[] = [
+            'label' => Yii::t('frontend', 'Search'),
+            'url' => ['search/index'],
+        ];
+        $menuItems[] = [
+            'label' => Icon::show('shopping-cart') . Yii::t('frontend', 'Cart') . '&nbsp' . Html::tag('span',
+                    Yii::$app->cart->getCount(), ['class' => 'badge']),
+            'url' => ['cart/index'],
+        ];
+        echo Nav::widget([
+            'options' => ['class' => 'navbar-nav navbar-right'],
+            'id' => 'menu-navbar',
+            'items' => $menuItems,
+            'encodeLabels' => false,
+        ]);
+        NavBar::end();
         ?>
 
         <?= $content ?>
     </div>
 
+    <!-- Footer -->
     <footer>
         <div class="footer" id="footer">
             <div class="container">
@@ -91,8 +101,8 @@ Icon::map($this, Icon::FA);
                         <ul>
                             <li><?= Html::a(Yii::t('frontend', 'Home'), ['site/index']) ?></li>
                             <li><?= Html::a(Yii::t('frontend', 'Catalog'), ['catalog/index']) ?></li>
-                            <?php foreach (Page::find()->all() as $page): ?>
-                            <li><?= Html::a($page->name, ['page/view', 'slug' => $page->slug]) ?></li>
+                            <?php foreach ($pages as $page): ?>
+                                <li><?= Html::a($page->name, ['page/view', 'slug' => $page->slug]) ?></li>
                             <?php endforeach ?>
                             <li><?= Html::a(Yii::t('frontend', 'Search'), ['search/index']) ?></li>
                             <li><?= Html::a(Yii::t('frontend', 'Cart'), ['cart/index']) ?></li>
@@ -105,21 +115,19 @@ Icon::map($this, Icon::FA);
                         <?= Form::widget() ?>
                     </div>
                 </div>
-                <!--/.row-->
             </div>
-            <!--/.container-->
         </div>
-        <!--/.footer-->
 
         <div class="footer-bottom">
             <div class="container">
                 <p class="pull-left">
-                    © <?= Yii::$app->name ?> <?= date('Y') ?>. <?= Yii::t('frontend', 'All rights reserved') ?>.
+                    © <?= Yii::$app->name ?> <?= date('Y') ?>. <?= Yii::t('frontend', 'All rights reserved') ?>. <a
+                        href="http://solomaha.me/">Автор сайта</a>
                 </p>
             </div>
         </div>
-        <!--/.footer-bottom-->
     </footer>
+    <!-- end Footer -->
 
     <?php $this->endBody() ?>
 </body>

@@ -44,14 +44,14 @@ $this->registerMetaTag(['name' => 'keywords', 'content' => $model->meta_keywords
         </blockquote>
 
         <?php if ($model->categories): ?>
-        <div class="child-categories">
-            <?php foreach ($model->categories as $category): ?>
-                <?= Html::a($category->name, ['catalog/category', 'category' => $category->slug], [
-                    'class' => 'btn btn-lg btn-primary col-sm-4',
-                ]) ?>
-            <?php endforeach ?>
-            <div class="clearfix"></div>
-        </div>
+            <div class="child-categories">
+                <?php foreach ($model->categories as $category): ?>
+                    <?= Html::a($category->name, ['catalog/category', 'category' => $category->slug], [
+                        'class' => 'btn btn-lg btn-primary col-sm-4',
+                    ]) ?>
+                <?php endforeach ?>
+                <div class="clearfix"></div>
+            </div>
         <?php endif ?>
 
         <div class="well">

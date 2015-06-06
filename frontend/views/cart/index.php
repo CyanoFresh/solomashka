@@ -59,7 +59,8 @@ $this->params['breadcrumbs'][] = $this->title;
                     'label' => Yii::t('frontend/cart', 'Product'),
                     'format' => 'html',
                     'value' => function ($model) {
-                        return Html::a($model->name, ['catalog/view', 'slug' => $model->slug, 'category' => $model->category->slug]);
+                        return Html::a($model->name,
+                            ['catalog/view', 'slug' => $model->slug, 'category' => $model->category->slug]);
                     },
                 ],
                 [
@@ -67,7 +68,8 @@ $this->params['breadcrumbs'][] = $this->title;
                     'label' => Yii::t('frontend/cart', 'Category'),
                     'format' => 'html',
                     'value' => function ($model) {
-                        return Html::a($model->category->name, ['catalog/category', 'category' => $model->category->slug]);
+                        return Html::a($model->category->name,
+                            ['catalog/category', 'category' => $model->category->slug]);
                     },
                 ],
                 [

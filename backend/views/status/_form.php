@@ -1,8 +1,8 @@
 <?php
 
-use yii\helpers\Html;
 use kartik\widgets\ActiveForm;
 use kartik\widgets\ColorInput;
+use yii\helpers\Html;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\Status */

@@ -1,7 +1,7 @@
 <?php
 
-use yii\helpers\Html;
 use yii\grid\GridView;
+use yii\helpers\Html;
 
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\PageSearch */
@@ -14,7 +14,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <h1 class="page-header">
         <?= $this->title ?>
-        <?= Html::a('<span class="glyphicon glyphicon-plus"></span>', ['create'], ['class' => 'btn btn-success pull-right']) ?>
+        <?= Html::a('<span class="glyphicon glyphicon-plus"></span>', ['create'],
+            ['class' => 'btn btn-success pull-right']) ?>
     </h1>
 
     <?= $this->render('_search', [

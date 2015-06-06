@@ -3,8 +3,8 @@
 namespace frontend\controllers;
 
 use common\models\Category;
-use Yii;
 use common\models\Product;
+use Yii;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;

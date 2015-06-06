@@ -2,12 +2,12 @@
 
 namespace frontend\controllers;
 
-use Yii;
-use yii\web\Controller;
-use yii\helpers\Url;
-use yii\web\Response;
-use common\models\Product;
 use common\models\Category;
+use common\models\Product;
+use Yii;
+use yii\helpers\Url;
+use yii\web\Controller;
+use yii\web\Response;
 
 class SitemapController extends Controller
 {

@@ -1,7 +1,7 @@
 <?php
 
-use common\models\Status;
 use common\models\Category;
+use common\models\Status;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
@@ -19,7 +19,8 @@ $statuses = ArrayHelper::map($status_models, 'id', 'name');
 <div class="panel panel-default">
     <div class="panel-heading" role="tab" id="headingOne">
         <h4 class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true"
+               aria-controls="collapseOne">
                 <?= Yii::t('backend/product', 'Search Products') ?>
             </a>
         </h4>

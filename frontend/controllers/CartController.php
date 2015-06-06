@@ -2,8 +2,8 @@
 
 namespace frontend\controllers;
 
-use common\models\Product;
 use common\models\Order;
+use common\models\Product;
 use Yii;
 use yii\data\ArrayDataProvider;
 use yii\web\Controller;
@@ -69,9 +69,9 @@ class CartController extends Controller
 
             if ($model->validate() && $model->save()) {
                 Yii::$app->mailer->compose('order/html', [
-                        'model' => $model,
-                        'dataProvider' => $dataProvider,
-                    ])
+                    'model' => $model,
+                    'dataProvider' => $dataProvider,
+                ])
                     ->setFrom(Yii::$app->params['email']['from'])
                     ->setTo(Yii::$app->params['email']['to'])
                     ->setSubject('На сайте размещен новый заказ')

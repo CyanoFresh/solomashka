@@ -2,13 +2,13 @@
 
 namespace backend\controllers;
 
-use Yii;
 use common\models\Page;
 use common\models\PageSearch;
+use Yii;
+use yii\filters\AccessControl;
+use yii\filters\VerbFilter;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
-use yii\filters\AccessControl;
 
 /**
  * PageController implements the CRUD actions for Page model.
@@ -22,7 +22,7 @@ class PageController extends Controller
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['index', 'view', 'create', 'update' , 'delete'],
+                        'actions' => ['index', 'view', 'create', 'update', 'delete'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],

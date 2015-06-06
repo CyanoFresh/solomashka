@@ -21,7 +21,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'date:datetime',
             'email:email',
             'name',
-
             [
                 'class' => 'yii\grid\ActionColumn',
                 'template' => '{delete}',

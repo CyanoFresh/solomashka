@@ -1,7 +1,7 @@
 <?php
 use ijackua\sharelinks\ShareLinks;
-use yii\helpers\Html;
 use kartik\icons\Icon;
+use yii\helpers\Html;
 
 /* @var $this yii\web\View */
 ?>

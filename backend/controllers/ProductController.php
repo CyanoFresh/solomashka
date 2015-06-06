@@ -3,16 +3,16 @@
 namespace backend\controllers;
 
 use common\models\Image;
-use Yii;
 use common\models\Product;
 use common\models\ProductSearch;
+use Yii;
+use yii\filters\AccessControl;
+use yii\filters\VerbFilter;
+use yii\helpers\FileHelper;
 use yii\imagine\Image as Imagine;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
-use yii\filters\AccessControl;
-use yii\filters\VerbFilter;
 use yii\web\UploadedFile;
-use yii\helpers\FileHelper;
 
 /**
  * ProductController implements the CRUD actions for Product model.
@@ -26,7 +26,7 @@ class ProductController extends Controller
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['index', 'view', 'create', 'update' , 'delete'],
+                        'actions' => ['index', 'view', 'create', 'update', 'delete'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -100,8 +100,9 @@ class ProductController extends Controller
                 $starty = $size[1] - $watermark_height;
 
                 Imagine::watermark($dir . '/main.jpg', '@frontend/web/uploads/watermark.png', [
-                    $startx, $starty
-                ]) ->save($dir . '/main.jpg', ['quality' => 100]);
+                    $startx,
+                    $starty
+                ])->save($dir . '/main.jpg', ['quality' => 100]);
 
                 // Save images
                 if ($model->images) {
@@ -121,9 +122,11 @@ class ProductController extends Controller
                         $startx = $size[0] - $watermark_width;
                         $starty = $size[1] - $watermark_height;
 
-                        Imagine::watermark($dir . '/' . $imageModel->id . '.jpg', '@frontend/web/uploads/watermark.png', [
-                            $startx, $starty
-                        ]) ->save($dir . '/' . $imageModel->id . '.jpg', ['quality' => 100]);
+                        Imagine::watermark($dir . '/' . $imageModel->id . '.jpg', '@frontend/web/uploads/watermark.png',
+                            [
+                                $startx,
+                                $starty
+                            ])->save($dir . '/' . $imageModel->id . '.jpg', ['quality' => 100]);
                     }
                 }
             }
@@ -167,8 +170,9 @@ class ProductController extends Controller
                     $starty = $size[1] - $watermark_height;
 
                     Imagine::watermark($dir . '/main.jpg', '@frontend/web/uploads/watermark.png', [
-                        $startx, $starty
-                    ]) ->save($dir . '/main.jpg', ['quality' => 100]);
+                        $startx,
+                        $starty
+                    ])->save($dir . '/main.jpg', ['quality' => 100]);
                 }
 
                 if ($model->images) {
@@ -201,9 +205,11 @@ class ProductController extends Controller
                         $startx = $size[0] - $watermark_width;
                         $starty = $size[1] - $watermark_height;
 
-                        Imagine::watermark($dir . '/' . $imageModel->id . '.jpg', '@frontend/web/uploads/watermark.png', [
-                            $startx, $starty
-                        ]) ->save($dir . '/' . $imageModel->id . '.jpg', ['quality' => 100]);
+                        Imagine::watermark($dir . '/' . $imageModel->id . '.jpg', '@frontend/web/uploads/watermark.png',
+                            [
+                                $startx,
+                                $starty
+                            ])->save($dir . '/' . $imageModel->id . '.jpg', ['quality' => 100]);
                     }
                 }
             }

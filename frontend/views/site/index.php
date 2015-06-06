@@ -1,9 +1,9 @@
 <?php
+use common\models\Slide;
 use frontend\widgets\Alert;
 use yii\bootstrap\Carousel;
 use yii\helpers\Html;
 use yii\widgets\ListView;
-use common\models\Slide;
 
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */

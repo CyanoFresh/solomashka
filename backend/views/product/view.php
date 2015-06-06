@@ -15,10 +15,11 @@ $image_models = Image::findAll(['model_id' => $model->id]);
 $images = null;
 
 foreach ($image_models as $image) {
-    $images .= Html::img(Yii::$app->urlManagerFrontEnd->baseUrl . '/uploads/product/' . $model->id . '/' . $image->id . '.jpg', [
-        'width' => '200px',
-        'class' => 'img-thumbnail',
-    ]);
+    $images .= Html::img(Yii::$app->urlManagerFrontEnd->baseUrl . '/uploads/product/' . $model->id . '/' . $image->id . '.jpg',
+        [
+            'width' => '200px',
+            'class' => 'img-thumbnail',
+        ]);
 }
 ?>
 <div class="product-view">
@@ -28,7 +29,11 @@ foreach ($image_models as $image) {
         <div class="btn-group pull-right">
             <?= Html::a(
                 '<span class="glyphicon glyphicon-eye-open"></span>',
-                Yii::$app->urlManagerFrontEnd->createUrl(['catalog/view', 'slug' => $model->slug, 'category' => $model->category->slug]),
+                Yii::$app->urlManagerFrontEnd->createUrl([
+                    'catalog/view',
+                    'slug' => $model->slug,
+                    'category' => $model->category->slug
+                ]),
                 [
                     'class' => 'btn btn-success',
                     'target' => '_blank',

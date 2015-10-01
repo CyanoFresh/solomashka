@@ -53,7 +53,11 @@ $this->title = Yii::t('backend/order', 'Order #{orderID}', [
             'attribute' => 'name',
             'format' => 'html',
             'value' => function ($model) {
-                return Html::a($model->name, Url::to(['catalog/view', 'slug' => $model->slug], true));
+                return Html::a($model->name, Url::to([
+                    'catalog/view',
+                    'category' => $model->category->slug,
+                    'slug' => $model->slug
+                ], true));
             },
         ],
         'price:currency',

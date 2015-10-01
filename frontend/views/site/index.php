@@ -25,6 +25,7 @@ foreach (Slide::find()->orderBy('sortOrder')->all() as $slide) {
     'items' => $slides,
     'options' => [
         'class' => 'slide',
+        'data-interval' => 8000,
     ],
     'controls' => [
         '<span class="icon-prev"></span>',

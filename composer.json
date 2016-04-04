@@ -26,7 +26,7 @@
     "yiisoft/yii2-swiftmailer": "*",
     "omnilight/yii2-shopping-cart": "*",
     "kartik-v/yii2-widgets": "*",
-    "zelenin/yii2-slug-behavior": "~0.2@stable",
+    "zelenin/yii2-slug-behavior": "~1.5.1",
     "vova07/yii2-imperavi-widget": "*",
     "2amigos/yii2-gallery-widget": "*",
     "himiklab/yii2-sortable-grid-view-widget": "*",

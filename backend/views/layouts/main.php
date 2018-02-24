@@ -1,4 +1,5 @@
 <?php
+
 use backend\assets\AppAsset;
 use common\models\Order;
 use yii\bootstrap\Nav;
@@ -27,6 +28,8 @@ $newOrders = Order::find()->where(['status' => Order::STATUS_NEW])->count();
 
 <header>
     <?php
+    if (!Yii::$app->user->isGuest) {
+
     NavBar::begin([
         'brandLabel' => Yii::$app->name,
         'brandUrl' => Yii::$app->homeUrl,
@@ -90,6 +93,8 @@ $newOrders = Order::find()->where(['status' => Order::STATUS_NEW])->count();
     ]);
 
     NavBar::end();
+
+    }
     ?>
 </header>
 

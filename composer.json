@@ -1,53 +1,39 @@
 {
-  "name": "cyanofresh/yii2shop",
-  "description": "Online Shop on Yii2",
-  "keywords": [
-    "yii2",
-    "framework",
-    "advanced",
-    "application template",
-    "shop",
-    "online",
-    "e-commerce"
-  ],
-  "homepage": "http://yii2shop.solomaha.me/",
-  "type": "project",
-  "license": "BSD-3-Clause",
-  "support": {
-    "issues": "https://github.com/CyanoFresh/yii2shop/issues",
-    "wiki": "https://github.com/CyanoFresh/yii2shop/wiki/",
-    "source": "https://github.com/CyanoFresh/yii2shop"
-  },
   "minimum-stability": "dev",
+  "prefer-stable": true,
   "require": {
-    "php": ">=5.4.0",
-    "yiisoft/yii2": "*",
-    "yiisoft/yii2-bootstrap": "*",
-    "yiisoft/yii2-swiftmailer": "*",
-    "omnilight/yii2-shopping-cart": "*",
-    "kartik-v/yii2-widgets": "*",
+    "php": ">=7.1",
+    "yiisoft/yii2": "~2.0.6",
+    "yiisoft/yii2-bootstrap": "~2.0.0",
+    "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0",
+    "omnilight/yii2-shopping-cart": "^1.2.2",
+    "kartik-v/yii2-widgets": "^3.4.0",
     "zelenin/yii2-slug-behavior": "~1.5.1",
-    "vova07/yii2-imperavi-widget": "*",
-    "2amigos/yii2-gallery-widget": "*",
-    "himiklab/yii2-sortable-grid-view-widget": "*",
-    "ijackua/yii2-sharelinks-widget": "*",
-    "kartik-v/yii2-icons": "dev-master",
-    "rmrevin/yii2-minify-view": "*",
-    "yiisoft/yii2-imagine": "*"
+    "vova07/yii2-imperavi-widget": "~2.0",
+    "2amigos/yii2-gallery-widget": "~1.0",
+    "himiklab/yii2-sortable-grid-view-widget": "^1.0",
+    "ijackua/yii2-sharelinks-widget": "^1.0",
+    "kartik-v/yii2-icons": "^1.4",
+    "rmrevin/yii2-minify-view": "^2",
+    "yiisoft/yii2-imagine": "^2"
   },
   "require-dev": {
-    "yiisoft/yii2-codeception": "*",
-    "yiisoft/yii2-debug": "*",
-    "yiisoft/yii2-gii": "*",
-    "yiisoft/yii2-faker": "*"
+    "yiisoft/yii2-debug": "~2.0.0",
+    "yiisoft/yii2-gii": "~2.0.0",
+    "yiisoft/yii2-faker": "~2.0.0",
+    "codeception/base": "^2.2.3",
+    "codeception/verify": "~0.3.1"
   },
   "config": {
-    "process-timeout": 1800
-  },
-  "extra": {
-    "asset-installer-paths": {
-      "npm-asset-library": "vendor/npm",
-      "bower-asset-library": "vendor/bower"
+    "process-timeout": 1800,
+    "fxp-asset": {
+      "enabled": false
     }
-  }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ],
 }

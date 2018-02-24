@@ -17,6 +17,24 @@ return [
         'user' => [
             'identityClass' => 'backend\models\User',
             'enableAutoLogin' => true,
+            'identityCookie' => [
+                'name' => '_identity-backend',
+                'path' => '/admin',
+                'httpOnly' => true,
+            ],
+        ],
+        'request' => [
+            'csrfParam' => '_csrf-backend',
+            'csrfCookie' => [
+                'httpOnly' => true,
+                'path' => '/admin',
+            ],
+        ],
+        'session' => [
+            'name' => 'solomashka-backend',
+            'cookieParams' => [
+                'path' => '/admin',
+            ],
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,

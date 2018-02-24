@@ -1,6 +1,9 @@
 Solomashka
 ===================================
 
+ABANDONED 
+###
+
 This is e-commerce application built on Yii2Shop.
 
 [Demo](http://shop.solomaha.me/)

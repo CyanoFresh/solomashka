@@ -1,12 +1,10 @@
 Solomashka
 ===================================
 
-ABANDONED 
-###
+# ABANDONED. MORE UPDATED HERE https://github.com/CyanoFresh/Solomashka.com
+
 
 This is e-commerce application built on Yii2Shop.
-
-[Demo](http://shop.solomaha.me/)
 
 REQUIREMENTS
 ------------
